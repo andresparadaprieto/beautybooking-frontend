@@ -1,0 +1,147 @@
+@tailwind base; /* Resetea estilos del navegador */
+@tailwind components; /* Clases de componentes de Tailwind */
+@tailwind utilities; /* Todas las utilidades de Tailwind */
+
+/* Estilos base personalizados usando @layer */
+@layer base {
+  /* Aplica estilos a todos los h1, h2, etc. */
+  h1 {
+    @apply text-3xl font-bold text-gray-900;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-gray-800;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-gray-700;
+  }
+
+  /* Estilo base para el body */
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+/* Componentes reutilizables personalizados */
+@layer components {
+  /* Botón primario - lo usaremos mucho */
+  .btn-primary {
+    @apply bg-beauty-500 text-white px-4 py-2 rounded-lg font-semibold
+           hover:bg-beauty-600 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-beauty-500 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  /* Botón secundario */
+  .btn-secondary {
+    @apply bg-gray-200 text-gray-800 px-4 py-2 rounded-lg font-semibold
+           hover:bg-gray-300 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+
+  /* Botón de peligro (cancelar, eliminar) */
+  .btn-danger {
+    @apply bg-red-500 text-white px-4 py-2 rounded-lg font-semibold
+           hover:bg-red-600 transition-colors duration-200
+           focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2;
+  }
+
+  /* Card reutilizable */
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-200;
+  }
+
+  /* Input de formulario */
+  .form-input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-beauty-500 focus:border-transparent
+           placeholder-gray-400;
+  }
+
+  /* Label de formulario */
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-1;
+  }
+
+  /* Estado badge (para reservas) */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-green-100 text-green-800;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800;
+  }
+
+  .badge-danger {
+    @apply bg-red-100 text-red-800;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800;
+  }
+}
+
+/* Utilidades personalizadas */
+@layer utilities {
+  /* Animación de carga */
+  .animate-spin-slow {
+    animation: spin 2s linear infinite;
+  }
+
+  /* Scrollbar personalizado */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-gray-100 rounded-lg;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-lg hover:bg-gray-500;
+  }
+}
+
+/* Estilos específicos para el calendario */
+.calendar-day {
+  @apply p-2 text-center cursor-pointer hover:bg-beauty-50 rounded-lg transition-colors;
+}
+
+.calendar-day.selected {
+  @apply bg-beauty-500 text-white hover:bg-beauty-600;
+}
+
+.calendar-day.disabled {
+  @apply text-gray-300 cursor-not-allowed hover:bg-transparent;
+}
+
+.calendar-day.available {
+  @apply bg-green-50 text-green-700 font-semibold;
+}
+
+/* Estilos para los slots de tiempo */
+.time-slot {
+  @apply border rounded-lg p-3 cursor-pointer transition-all duration-200;
+}
+
+.time-slot.available {
+  @apply border-green-500 hover:bg-green-50;
+}
+
+.time-slot.limited {
+  @apply border-yellow-500 hover:bg-yellow-50;
+}
+
+.time-slot.full {
+  @apply border-red-500 bg-red-50 cursor-not-allowed opacity-50;
+}
+
+.time-slot.selected {
+  @apply border-beauty-500 bg-beauty-50;
+}

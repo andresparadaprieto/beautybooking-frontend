@@ -2,7 +2,7 @@
 import axios from "axios";
 
 // URL base del backend
-const API_URL = "http://localhost:8080";
+const API_URL = "beautybooking-backend-production.up.railway.app";
 
 // Creamos una instancia personalizada de axios
 // Esto nos permite configurar opciones por defecto para todas las peticiones

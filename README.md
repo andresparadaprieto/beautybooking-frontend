@@ -13,8 +13,9 @@
 - **Backend:** https://beautybooking-backend-production.up.railway.app
 
 ### 👤 Credenciales de Prueba
-- **Administrador:** admin@beauty.com / admin123
-- **Cliente:** cliente@test.com / cliente123
+- **Administrador:** admin@beautybooking.com / admin123
+- **Cliente:** carlos.rodriguez@example.com	 / password123
+- **Cliente:** maria.garcia@example.com	/ password123
 
 ---
 

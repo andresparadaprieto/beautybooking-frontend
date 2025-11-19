@@ -4,7 +4,7 @@ Sistema de gestión de reservas para centros de estética y salones de belleza -
 
 **Proyecto:** DAW (Desarrollo de Aplicaciones Web) - Ciclo Formativo  
 **Autor:** Andrés Eduardo Parada Prieto  
-**Tecnologías:** React 19, Vite, TailwindCSS, React Router  
+**Tecnologías:** React, Vite, TailwindCSS, React Router  
 **Backend:** [BeautyBooking API](https://github.com/andresparadaprieto/beautybooking-backend)
 
 ---
@@ -42,13 +42,6 @@ Sistema de gestión de reservas para centros de estética y salones de belleza -
 👑 **Confirmación de Reservas** - Validación de citas pendientes  
 👑 **Dashboard** - Estadísticas y resumen del día  
 
-### Interfaz de Usuario
-
-🎨 **Diseño Responsive** - Adaptado a móvil, tablet y desktop  
-🎨 **Interfaz Intuitiva** - Navegación clara y sencilla  
-🎨 **Feedback Visual** - Notificaciones y estados de carga  
-🎨 **Validaciones en Tiempo Real** - Formularios inteligentes  
-
 ---
 
 ## 🛠️ Requisitos
@@ -82,8 +75,6 @@ npm install
 
 **Archivo:** `src/services/api.js`
 
-Este archivo es **CRÍTICO** para que la aplicación funcione correctamente.
-
 #### Para Desarrollo Local
 
 ```javascript
@@ -108,13 +99,6 @@ const api = axios.create({
 });
 ```
 
-**💡 Importante:** Asegúrate de que:
-- El backend esté ejecutándose antes de iniciar el frontend
-- La URL coincida con donde está corriendo tu API
-- No haya errores de CORS (el backend debe permitir el origen del frontend)
-
----
-
 ## 🚀 Ejecutar la Aplicación
 
 ### Modo Desarrollo
@@ -130,49 +114,10 @@ La aplicación se abrirá en: **http://localhost:5173**
 ```bash
 npm run build
 ```
-
-Los archivos compilados se generarán en la carpeta `dist/`
-
 ### Preview de Producción
 
 ```bash
 npm run preview
-```
-
----
-
-## 📁 Estructura del Proyecto
-
-```
-beauty-booking-frontend/
-├── public/                    # Recursos estáticos
-├── src/
-│   ├── assets/               # Imágenes, logos
-│   ├── components/           # Componentes reutilizables
-│   │   ├── admin/           # Componentes del panel admin
-│   │   ├── auth/            # Login, registro
-│   │   ├── booking/         # Sistema de reservas
-│   │   └── common/          # Componentes compartidos
-│   ├── context/             # Context API (Auth)
-│   ├── pages/               # Páginas principales
-│   │   ├── HomePage.jsx
-│   │   ├── LoginPage.jsx
-│   │   ├── ServiciosPage.jsx
-│   │   ├── ReservasPage.jsx
-│   │   └── AdminDashboard.jsx
-│   ├── services/            # Servicios API
-│   │   ├── api.js          # ⭐ Configuración Axios
-│   │   ├── authService.js
-│   │   ├── serviciosService.js
-│   │   ├── reservasService.js
-│   │   └── adminService.js
-│   ├── utils/               # Utilidades
-│   ├── App.jsx              # Componente principal
-│   ├── main.jsx             # Punto de entrada
-│   └── index.css            # Estilos globales (Tailwind)
-├── package.json
-├── vite.config.js
-└── tailwind.config.js
 ```
 
 ---
@@ -203,7 +148,7 @@ beauty-booking-frontend/
 
 ## ☁️ Despliegue
 
-### Opción 1: Vercel (Recomendado)
+### Vercel 
 
 1. **Crear cuenta en [Vercel](https://vercel.com)**
 2. **Importar repositorio desde GitHub**
@@ -211,25 +156,8 @@ beauty-booking-frontend/
    - Build Command: `npm run build`
    - Output Directory: `dist`
    - Root Directory: `beauty-booking-frontend`
-4. **Añadir variable de entorno:**
-   ```
-   VITE_API_URL=https://tu-backend.railway.app
-   ```
-5. **Deploy automático** ✅
+4. **Deploy automático** ✅
 
-
-### Opción 3: Railway
-
-```bash
-# Instalar Railway CLI
-npm i -g @railway/cli
-
-# Login
-railway login
-
-# Deploy
-railway up
-```
 
 **⚠️ Importante:** Actualiza la URL del backend en `api.js` antes del deploy.
 

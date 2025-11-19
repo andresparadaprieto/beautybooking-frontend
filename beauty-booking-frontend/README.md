@@ -12,11 +12,9 @@ Sistema de gestión de reservas para centros de estética y salones de belleza -
 ## 📋 Tabla de Contenidos
 
 - [Características](#-características)
-- [Requisitos](#-requisitos)
 - [Instalación](#-instalación)
 - [Configuración](#️-configuración-importante)
 - [Ejecutar la Aplicación](#-ejecutar-la-aplicación)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
 - [Funcionalidades](#-funcionalidades)
 - [Despliegue](#️-despliegue)
 - [Tecnologías](#-tecnologías-utilizadas)
